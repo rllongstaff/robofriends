@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList'; // import our CardList component
 import SearchBox from './SearchBox'; // import our SearchBox component
 import { robots } from './robots'; // a list of our js robot objects
+import './App.css'; // import the specific css for this component
 
 // use class sytnax so that we can create state inside the constructor function
 class App extends Component {
@@ -26,8 +27,8 @@ class App extends Component {
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })        
         return (
-            <div className="tc">
-                <h1>RoboFriends</h1>
+            <div className='tc'>
+                <h1 className='f1'>RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <CardList robots={filteredRobots} />
             </div>
